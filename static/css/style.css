@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    margin-top: 1rem;
+    color:blue;   
+}
+
+.col-md-6{
+    margin: 0 auto;
+}
+
+.cent{
+    margin: 1rem auto 0 auto;
+    display: block;
+}

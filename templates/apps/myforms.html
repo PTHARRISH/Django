@@ -1,0 +1,31 @@
+{% extends 'apps/first.html'%}
+{%block title%} My Forms {%endblock%}
+{%load static %}
+{%block content%}
+<link rel="stylesheet" href="{%static 'css/style.css'%}">
+<h1>MyForms</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="POST" action="{% url 'submitform' %}">
+                 <!-- using GET method CSRF not needed  -->
+                 <!-- action tag you need to pass the path name="submitform" -->
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="Email">Email address</label>
+                  <input type="email" class="form-control" id="Email1" name="Email1"placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="Textarea1">Textarea</label>
+                    <textarea class="form-control" id="Textarea1" name="Textarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary cent">Submit</button>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>
+{%endblock%}
+
+

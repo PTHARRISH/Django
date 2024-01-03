@@ -1,0 +1,21 @@
+{%extends 'apps/first.html' %}
+{%load static %} <!-- load a static files in html -->
+{%block title%}Images{%endblock%}
+{%block content%}
+<!-- after load a static files stylesheet must declare inside block content -->
+<link rel="stylesheet" href="{%static 'css/style.css'%}"> 
+<h1>Images</h1>
+<div class="container-fluid">
+    <div class="row">
+        {%if var%}
+        <div class="col-md-6">
+            <img src="{% static 'images/django.jpg' %}" class="img-fluid" alt="django.jpg"/>
+        </div>
+        {%else%}
+        <div class="col-md-6">
+            <img src="{% static 'images/Python.jpg' %}" class="img-fluid" alt="python.jpg"/>
+        </div>
+        {%endif%}
+    </div>
+</div>
+{%endblock%}
