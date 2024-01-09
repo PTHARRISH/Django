@@ -30,6 +30,8 @@
 # It's important to know that the name you give the view function doesn't matter, 
 # the function doesn't need to be named in a certain way for Django to recognize it. 
 
+
+# create home view function: 
 # In this example, it's called home because defining a function name that clearly indicates 
 # Next, you create a variable and use it to store a string containing the HTML to be returned. 
 # Once again, you can name this variable anything you want. 
@@ -41,3 +43,27 @@
 # such as processing data for emails and forms, retrieving data from a database, transforming data, 
 # and rendering templates.
 
+# It's important to know that creating a view function is not enough to make the request response work. 
+# The view function needs to be mapped to a URL so when the request to the URL is made, the view function gets called. 
+# This process of mapping a URL to a view function is known as routing. 
+# To set up this routing to map URLs to views, you will need to create a new file. 
+
+
+# url routing to view function:
+# Inside your project app, create a new file called urls.py.
+# You may recall that the project has a file with this name also.
+# You will learn about the difference between them later. 
+# Inside the urls.py file of the app, you first import the path function. 
+# Then from the app directory, you import the views.py file. 
+# Notice that both files are in the same directory. 
+# You only need to place the period symbol after the import statement. 
+# Next, to create a route and map a URL to a view, you need to create a list sequence using the variable, URL patterns. 
+# This variable is assigned to a list that contains the URL paths that you want to create inside the app. 
+# The URL patterns list can contain multiple paths, and each path is created using the path function.
+# The function can accept arguments and two are acquired. 
+# The first argument is the route, which is a string that contains a URL pattern, 
+# and the second argument is the view, which contains the relative path and the name of the view function. 
+# In this example, the view function is called for the homepage of the app. 
+# For now, it's set to an empty string. 
+# view functions and how developers use them to process HTTP requests and return an HTTP response. 
+# view functions are mapped to URLs using the path function in the urls.py file of the app.
