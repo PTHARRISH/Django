@@ -22,4 +22,5 @@ urlpatterns = [
     path('apps',include('Apps.urls')),
     path('rest/',include('restapi.urls')),
     path('',include('coursera.urls')),
+    path('w3/',include('w3.urls')),
 ]
