@@ -23,8 +23,28 @@
 # all() Query
 # It is used to display all the values in the database
 
+# filter() :
+# It is used to filter and display the particular condition
+# Inside the filter 
+# filter(firstname=name)
+# filter(firstname__startswith=name)
+# filter(lastname__endswith=name)
+
 # Simple OR Query
+# OR query is used for there are two set of queries if either one condition becomes True 
+# it prints the output query 
+# OR is a logical operator that retrieves records satisfying either of the specified conditions.
+# OR queries in Django are used to filter records that match any of the specified conditions.
 
-
-# Models and fields
+# Student_E.objects.filter(lastname__startswith="PT") | Student_E.objects.filter(lastname__endswith="Admin")
+# <QuerySet [<Student_E: Unknown>, <Student_E: main>]>
 # 
+# ID	Full Name	    Age	    Class	    Teacher name
+# 2	    Unknown PT	    23	    II year	    Brook
+# 3	    main Admin	    18	    I Year	    Luffy
+
+
+# Q objects
+# A Q object in Django is a container for keyword arguments that can be used 
+# to create complex queries involving logical operators such as AND, OR, and NOT. 
+# You can import Q objects from django.db.models and use them with query methods such as filter, exclude, or get.
