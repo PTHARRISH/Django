@@ -14,5 +14,21 @@ def student_list(request):
     # >>> posts
     # <QuerySet [<Student_E: Harrish>]>
 
-def student_filter(request)
+
+# filter ,__startswith ,__end and OR query
+def student_filter(request):
+    posts=Student_E.objects.filter(lastname__startswith="PT") | Student_E.objects.filter(lastname__endswith="Admin")
+    print(posts)
+    print(posts.query)
+    print(connection.queries)
+    return render(request,'orm/output.html',{'posts':posts})
+
+
+# filter Q objects
+def student_filter(request):
+    posts=Student_E.objects.filter(lastname__startswith="PT") | Student_E.objects.filter(lastname__endswith="Admin")
+    print(posts)
+    print(posts.query)
+    print(connection.queries)
+    return render(request,'orm/output.html',{'posts':posts})
 
