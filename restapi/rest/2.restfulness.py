@@ -49,7 +49,7 @@
 # There should also be a unified way to modify or proceed further with a resource from the API result 
 # or representation in a standard XML or Json format. 
 
-# code on demand(business logic,code that can run improve results):
+# code on demand (business logic,code that can run improve results):
 # It means that the API may deliver some business logic or 
 # code that the client can run to further improve the response result.
 
