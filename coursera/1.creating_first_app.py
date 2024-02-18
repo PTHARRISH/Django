@@ -25,3 +25,4 @@
 # Next, you create a virtual environment for your Django application. 
 # Then you create a Django project and finally run the Django development server.
 
+
