@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('adm/', include('admin_honeypot.urls'),name='admin_honeypot'),
+    # path('adm/', include('admin_honeypot.urls'),name='admin_honeypot'),
     path('apps',include('Apps.urls')),
     path('rest/',include('restapi.urls')),
     path('',include('coursera.urls')),
