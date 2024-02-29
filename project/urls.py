@@ -18,9 +18,10 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('adm/', include('admin_honeypot.urls'),name='admin_honeypot'),
     path('apps',include('Apps.urls')),
     path('rest/',include('restapi.urls')),
     path('',include('coursera.urls')),
     path('orm/',include('ORM.urls')),
+    path('secret/',admin.site.urls),
 ]
