@@ -19,6 +19,11 @@ def display_date(request):
     return HttpResponse(date_joined)
 
 
+def menu(request):
+    text="""<h1 style="color:#F4CE14">This is little lemon Again!</h1>"""
+    return HttpResponse(text)
+
+
 # def myview(request): 
 #     if request.method=='GET': 
 #         val = request.GET['key'] 

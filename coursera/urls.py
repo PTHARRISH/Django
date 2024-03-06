@@ -6,4 +6,5 @@ urlpatterns = [
     path('hello/',views.say_hello,name="hello"),
     path('homepage/',views.homepage,name="homepage"),
     path('date/',views.display_date,name="display"),
+    path('menu/',views.menu,name='menu'),
 ]
